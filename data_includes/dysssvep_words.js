@@ -1,25 +1,29 @@
 var shuffleSequence = seq("intro", sepWith("sep", rshuffle(endsWith("w"), endsWith("p"), endsWith("n"))));
 
 var defaults = [
-    "Separator", {
-        transfer: 1000,
-        normalMessage: "Please wait for the next word.",
-        errorMessage: "Wrong. Please wait for the next sentence."
-    },
-    "AcceptabilityJudgment", {
-        as: ["1", "2", "3", "4", "5", "6", "7"],
-        presentAsScale: true,
-        instructions: "Use number keys or click boxes to answer.",
-        leftComment: "(Út í hött)", rightComment: "(Eðlilegt og náttúrlegt)"
-    },
-    "Message", {
-        hideProgressBar: true
-    },
-    "Form", {
-        hideProgressBar: true,
-        continueOnReturn: true,
-        saveReactionTime: true
-    }
+  "Separator", {
+    transfer: 500,
+    normalMessage: "Please wait for the next word.",
+    errorMessage: "Wrong. Please wait for the next sentence."
+  },
+  "AcceptabilityJudgment", {
+    q: "Hversu eðlilegt og náttúrulegt væri þetta sem íslenskt orð?",
+    as: ["1", "2", "3", "4", "5", "6", "7", "8"],
+    presentAsScale: true,
+    instructions: "Use number keys or click boxes to answer.",
+    leftComment: "(Út í hött)", rightComment: "(Alvöru íslenskt orð)"
+  },
+  "Message", {
+    hideProgressBar: true
+  },
+  "Form", {
+    hideProgressBar: true,
+    continueOnReturn: true,
+    saveReactionTime: true
+  },
+  "Question", {
+    as: ["Já", "Nei"],
+  }
 ];
 
 var items = [
